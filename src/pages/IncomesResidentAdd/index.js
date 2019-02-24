@@ -55,7 +55,7 @@ const selectStyles = StyleSheet.create({
   }
 });
 
-const Incomes = ({ navigation }) => (
+const IncomesResidentAdd = ({ navigation }) => (
   <PageBackground source={paulyincomesAdd}>
     <InputField
       styleOptions={inputStyles.expensePosition}
@@ -70,13 +70,13 @@ const Incomes = ({ navigation }) => (
     />
     <StyledButton
       style={[backStyles.size]}
-      onPress={() => navigation.navigate('Incomes')}
+      onPress={() => navigation.navigate('IncomesResident')}
     />
     <StyledButton
       style={[addStyles.position, addStyles.size]}
-      onPress={() => navigation.navigate('Incomes')}
+      onPress={() => navigation.navigate('IncomesResident')}
     />
   </PageBackground>
 );
 
-export default withNavigation(Incomes);
+export default withNavigation(IncomesResidentAdd);

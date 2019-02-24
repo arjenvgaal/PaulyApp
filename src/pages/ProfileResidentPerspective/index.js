@@ -22,7 +22,7 @@ const ProfileResidentPerspective = ({ navigation }) => (
   <PageBackground source={paulyprofileResidentPerspective}>
     <StyledButton
       style={[moreStyles.position, moreStyles.size]}
-      onPress={() => navigation.navigate('Incomes')}
+      onPress={() => navigation.navigate('ExpensesResident')}
     />
   </PageBackground>
 );

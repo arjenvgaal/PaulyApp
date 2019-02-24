@@ -21,7 +21,7 @@ const Home = ({ navigation }) => (
   <PageBackground source={paulyselectCoach}>
     <StyledButton
       style={[styles.position, styles.size]}
-      onPress={() => navigation.navigate('Incomes')}
+      onPress={() => navigation.navigate('ExpensesResident')}
     />
   </PageBackground>
 );

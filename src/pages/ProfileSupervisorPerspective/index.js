@@ -33,7 +33,7 @@ const ProfileSupervisorPerspective = ({ navigation }) => (
   <PageBackground source={paulyprofileSupervisorPerspective}>
     <StyledButton
       style={[moreStyles.position, moreStyles.size]}
-      onPress={() => navigation.navigate('Incomes')}
+      onPress={() => navigation.navigate('ExpensesSupervisor')}
     />
     <StyledButton
       style={[addStyles.position, addStyles.size]}
