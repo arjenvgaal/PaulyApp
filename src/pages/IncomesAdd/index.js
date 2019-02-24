@@ -2,7 +2,7 @@ import React from 'react';
 import PageBackground from '../../components/PageBackground';
 import StyledButton from '../../components/StyledButton';
 import InputField from '../../components/InputField';
-import paulyexpensesAdd from'../../assets/paulyexpensesAdd.png';
+import paulyincomesAdd from'../../assets/paulyincomesAdd.png';
 import { withNavigation } from 'react-navigation';
 import { StyleSheet } from "react-native";
 
@@ -55,8 +55,8 @@ const selectStyles = StyleSheet.create({
   }
 });
 
-const ExpensesResidentAdd = ({ navigation }) => (
-  <PageBackground source={paulyexpensesAdd}>
+const IncomesAdded = ({ navigation }) => (
+  <PageBackground source={paulyincomesAdd}>
     <InputField
       styleOptions={inputStyles.expensePosition}
       placeholder="Name of expense"
@@ -70,13 +70,13 @@ const ExpensesResidentAdd = ({ navigation }) => (
     />
     <StyledButton
       style={[backStyles.size]}
-      onPress={() => navigation.navigate('ExpensesResident')}
+      onPress={() => navigation.navigate('IncomesEmpty')}
     />
     <StyledButton
       style={[addStyles.position, addStyles.size]}
-      onPress={() => navigation.navigate('ExpensesResident')}
+      onPress={() => navigation.navigate('IncomesAdded')}
     />
   </PageBackground>
 );
 
-export default withNavigation(ExpensesResidentAdd);
+export default withNavigation(IncomesAdded);

@@ -55,7 +55,7 @@ const ProfileAddGoalAddStep = ({ navigation }) => (
     />
     <StyledButton
       style={[addStyles.position, addStyles.size]}
-      onPress={() => navigation.navigate('ProfileAddGoal')}
+      onPress={() => navigation.navigate('ProfileGoalAddGoalStepAdded')}
     />
   </PageBackground>
 );

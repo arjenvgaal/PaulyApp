@@ -2,14 +2,14 @@ import React from 'react';
 import PageBackground from '../../components/PageBackground';
 import ActionButton from '../../components/ActionButton';
 import StyledButton from '../../components/StyledButton';
-import paulyexpenses from'../../assets/paulyexpenses.png';
+import paulyexpensesEmpty from'../../assets/paulyexpensesEmpty.png';
 import { withNavigation } from 'react-navigation';
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   position: {
     position: 'absolute',
-    bottom: 115,
+    bottom: 240,
     right: 165,
   },
   size: {
@@ -18,14 +18,14 @@ const styles = StyleSheet.create({
   }
 });
 
-const ExpensesSupervisor = ({ navigation }) => (
-  <PageBackground source={paulyexpenses}>
+const ExpensesEmpty = ({ navigation }) => (
+  <PageBackground source={paulyexpensesEmpty}>
     <StyledButton
       style={[styles.position, styles.size]}
-      onPress={() => navigation.navigate('ExpensesSupervisorAdd')}
+      onPress={() => navigation.navigate('ExpensesAdd')}
     />
-    <ActionButton onPress={() => navigation.navigate('IncomesSupervisor')} />
+    <ActionButton onPress={() => navigation.navigate('IncomesResident')} />
   </PageBackground>
 );
 
-export default withNavigation(ExpensesSupervisor);
+export default withNavigation(ExpensesEmpty);

@@ -3,7 +3,7 @@ import PageBackground from '../../components/PageBackground';
 import ActionButton from '../../components/ActionButton';
 import CheckBox from '../../components/CheckBox';
 import StyledButton from '../../components/StyledButton';
-import paulyregisterSupervisor from'../../assets/paulyregisterSupervisor.png';
+import paulyregisterCoach from'../../assets/paulyregisterCoach.png';
 import InputField from '../../components/InputField';
 import { withNavigation } from "react-navigation";
 import { StyleSheet } from "react-native";
@@ -44,8 +44,8 @@ const selectStyles = StyleSheet.create({
 });
 
 
-const RegisterSupervisor = ({ navigation }) => (
-  <PageBackground source={paulyregisterSupervisor}>
+const RegisterCoach = ({ navigation }) => (
+  <PageBackground source={paulyregisterCoach}>
     <StyledButton
       style={[selectStyles.position, selectStyles.size]}
       onPress={() => navigation.navigate('RegisterResident')}
@@ -67,4 +67,4 @@ const RegisterSupervisor = ({ navigation }) => (
   </PageBackground>
 );
 
-export default withNavigation(RegisterSupervisor);
+export default withNavigation(RegisterCoach);

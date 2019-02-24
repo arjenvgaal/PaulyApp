@@ -1,46 +1,58 @@
 import React from 'react';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-import ExpensesResident from '../pages/ExpensesResident';
-import ExpensesSupervisor from '../pages/ExpensesSupervisor';
-import ExpensesResidentAdd from '../pages/ExpensesResidentAdd';
-import ExpensesSupervisorAdd from '../pages/ExpensesSupervisorAdd';
+import ExpensesAdd from '../pages/ExpensesAdd';
+import ExpensesAdded from '../pages/ExpensesAdded';
+import ExpensesEmpty from '../pages/ExpensesEmpty';
 import Home from '../pages/Home';
-import IncomesResident from '../pages/IncomesResident';
-import IncomesSupervisor from '../pages/IncomesSupervisor';
-import IncomesResidentAdd from '../pages/IncomesResidentAdd';
-import IncomesSupervisorAdd from '../pages/IncomesSupervisorAdd';
+import IncomesAdd from '../pages/IncomesAdd';
+import IncomesAdded from '../pages/IncomesAdded';
+import IncomesEmpty from '../pages/IncomesEmpty';
 import Overview from '../pages/Overview';
 import ProfileAddGoal from '../pages/ProfileAddGoal';
+import ProfileGoalAddGoalStepAdded from '../pages/ProfileGoalAddGoalStepAdded';
 import ProfileAddGoalAddStep from '../pages/ProfileAddGoalAddStep';
-import ProfileResidentPerspective from '../pages/ProfileResidentPerspective';
+import ProfileNoGoals from '../pages/ProfileNoGoals';
+import ProfileOneGoal from '../pages/ProfileOneGoal';
+import ProfileGoalCompleted from '../pages/ProfileGoalCompleted';
+import ProfileOneGoalComplete from '../pages/ProfileOneGoalComplete';
+import ProfileGoalAddGoalStepAddedAndChecked from '../pages/ProfileGoalAddGoalStepAddedAndChecked';
 import ProfileSupervisorPerspective from '../pages/ProfileSupervisorPerspective';
 import RegisterResident from '../pages/RegisterResident';
-import RegisterSupervisor from '../pages/RegisterSupervisor';
+import RegisterCoach from '../pages/RegisterCoach';
 import SelectCoach from '../pages/SelectCoach';
 import { fadeIn } from 'react-navigation-transitions';
 
 const NavigationRouter = createAppContainer(createStackNavigator(
   {
-    ExpensesResidentAdd: ExpensesResidentAdd,
-    ExpensesSupervisorAdd: ExpensesSupervisorAdd,
-    IncomesResidentAdd: IncomesResidentAdd,
-    IncomesSupervisorAdd: IncomesSupervisorAdd,
-    ExpensesResident: ExpensesResident,
-    ExpensesSupervisor: ExpensesSupervisor,
-    Home: Home,
-    IncomesResident: IncomesResident,
-    IncomesSupervisor: IncomesSupervisor,
-    Overview: Overview,
+    ExpensesAdd: ExpensesAdd,
+    ExpensesAdded: ExpensesAdded,
+    ExpensesEmpty: ExpensesEmpty,
+
+    IncomesAdd: IncomesAdd,
+    IncomesAdded: IncomesAdded,
+    IncomesEmpty: IncomesEmpty,
+
+    ProfileNoGoals: ProfileNoGoals,
+    ProfileOneGoal: ProfileOneGoal,
+    ProfileGoalCompleted: ProfileGoalCompleted,
+    ProfileOneGoalComplete: ProfileOneGoalComplete,
+
     ProfileAddGoal: ProfileAddGoal,
     ProfileAddGoalAddStep: ProfileAddGoalAddStep,
-    ProfileResidentPerspective: ProfileResidentPerspective,
-    ProfileSupervisorPerspective: ProfileSupervisorPerspective,
+    ProfileGoalAddGoalStepAdded: ProfileGoalAddGoalStepAdded,
+    ProfileGoalAddGoalStepAddedAndChecked: ProfileGoalAddGoalStepAddedAndChecked,
+
+    Home: Home,
+    Overview: Overview,
+
     RegisterResident: RegisterResident,
-    RegisterSupervisor: RegisterSupervisor,
+    RegisterCoach: RegisterCoach,
     SelectCoach: SelectCoach,
+
+    ProfileSupervisorPerspective: ProfileSupervisorPerspective,
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'ProfileGoalAddGoalStepAdded',
     headerMode: 'none',
     navigationOptions: {
       headerVisible: false,

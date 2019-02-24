@@ -3,7 +3,7 @@ import PageBackground from '../../components/PageBackground';
 import StyledButton from '../../components/StyledButton';
 import ActionButton from '../../components/ActionButton';
 import InputField from '../../components/InputField';
-import paulyprofileAddGoal from'../../assets/paulyprofileAddGoal.png';
+import paulyprofileGoalAddGoalStepAdded from'../../assets/paulyprofileGoalAddGoalStepAdded.png';
 import { withNavigation } from 'react-navigation';
 import {StyleSheet} from "react-native";
 
@@ -39,23 +39,38 @@ const inputStyles = StyleSheet.create({
   },
 });
 
+const goalStyles = StyleSheet.create({
+  position: {
+    position: 'absolute',
+    top: 195,
+    left: 25
+  },
+  size: {
+    width: '90%',
+    height: 80,
+  }
+});
 
-const ProfileAddGoal = ({ navigation }) => (
-  <PageBackground source={paulyprofileAddGoal}>
+const ProfileGoalAddGoalStepAdded = ({ navigation }) => (
+  <PageBackground source={paulyprofileGoalAddGoalStepAdded}>
     <StyledButton
       style={[backStyles.position, backStyles.size]}
-      onPress={() => navigation.navigate('ProfileNoGoals')}
+      onPress={() => navigation.navigate('ProfileAddGoal')}
     />
     <InputField
       styleOptions={inputStyles.goalNamePosition}
       placeholder="Name of your goal"
     />
     <StyledButton
+      style={[goalStyles.position, goalStyles.size]}
+      onPress={() => navigation.navigate('ProfileGoalAddGoalStepAddedAndChecked')}
+    />
+    <StyledButton
       style={[addStyles.position, addStyles.size]}
       onPress={() => navigation.navigate('ProfileAddGoalAddStep')}
     />
-    <ActionButton onPress={() => navigation.navigate('ProfileSupervisorPerspective')} />
+    <ActionButton onPress={() => navigation.navigate('ProfileOneGoal')} />
   </PageBackground>
 );
 
-export default withNavigation(ProfileAddGoal);
+export default withNavigation(ProfileGoalAddGoalStepAdded);

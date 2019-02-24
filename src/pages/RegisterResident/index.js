@@ -48,7 +48,7 @@ const RegisterResident = ({ navigation }) => (
   <PageBackground source={paulyregisterResident}>
     <StyledButton
       style={[selectStyles.position, selectStyles.size]}
-      onPress={() => navigation.navigate('RegisterSupervisor')}
+      onPress={() => navigation.navigate('RegisterCoach')}
     />
     <InputField
       styleOptions={inputStyles.firstNamePosition}

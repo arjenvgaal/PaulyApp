@@ -1,7 +1,7 @@
 import React from 'react';
 import PageBackground from '../../components/PageBackground';
 import StyledButton from '../../components/StyledButton';
-import paulyprofileSupervisorPerspective from'../../assets/paulyprofileSupervisorPerspective.png';
+import paulyprofileOneGoal from'../../assets/paulyprofileOneGoal.png';
 import { withNavigation } from 'react-navigation';
 import {StyleSheet} from "react-native";
 
@@ -42,15 +42,15 @@ const addStyles = StyleSheet.create({
   }
 });
 
-const ProfileSupervisorPerspective = ({ navigation }) => (
-  <PageBackground source={paulyprofileSupervisorPerspective}>
+const ProfileOneGoal = ({ navigation }) => (
+  <PageBackground source={paulyprofileOneGoal}>
     <StyledButton
       style={[moreStyles.position, moreStyles.size]}
       onPress={() => navigation.navigate('ExpensesEmpty')}
     />
     <StyledButton
       style={[goalStyles.position, goalStyles.size]}
-      onPress={() => navigation.navigate('ProfileGoalAddGoalStepAddedAndChecked')}
+      onPress={() => navigation.navigate('ProfileGoalAddGoalStepAdded')}
     />
     <StyledButton
       style={[addStyles.position, addStyles.size]}
@@ -59,4 +59,4 @@ const ProfileSupervisorPerspective = ({ navigation }) => (
   </PageBackground>
 );
 
-export default withNavigation(ProfileSupervisorPerspective);
+export default withNavigation(ProfileOneGoal);
