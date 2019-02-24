@@ -33,7 +33,7 @@ const goalStyles = StyleSheet.create({
 const addStyles = StyleSheet.create({
   position: {
     position: 'absolute',
-    bottom: 70,
+    bottom: 100,
     right: 165,
   },
   size: {
