@@ -43,6 +43,18 @@ const inputStyles = StyleSheet.create({
   },
 });
 
+const selectStyles = StyleSheet.create({
+  position: {
+    position: 'absolute',
+    bottom: 90,
+    marginHorizontal: 50
+  },
+  size: {
+    width: '74%',
+    height: 30,
+  }
+});
+
 const Incomes = ({ navigation }) => (
   <PageBackground source={paulyincomesAdd}>
     <InputField
@@ -53,9 +65,8 @@ const Incomes = ({ navigation }) => (
       styleOptions={inputStyles.amountPosition}
       placeholder="Amount"
     />
-    <InputField
-      styleOptions={inputStyles.selectPosition}
-      placeholder="Monthly"
+    <StyledButton
+      style={[selectStyles.position, selectStyles.size]}
     />
     <StyledButton
       style={[backStyles.size]}

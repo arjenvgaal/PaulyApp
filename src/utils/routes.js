@@ -8,7 +8,8 @@ import ProfileAddGoal from '../pages/ProfileAddGoal';
 import ProfileAddGoalAddStep from '../pages/ProfileAddGoalAddStep';
 import ProfileResidentPerspective from '../pages/ProfileResidentPerspective';
 import ProfileSupervisorPerspective from '../pages/ProfileSupervisorPerspective';
-import Register from '../pages/Register';
+import RegisterResident from '../pages/RegisterResident';
+import RegisterSupervisor from '../pages/RegisterSupervisor';
 import SelectCoach from '../pages/SelectCoach';
 
 const NavigationRouter = createAppContainer(createSwitchNavigator(
@@ -21,11 +22,12 @@ const NavigationRouter = createAppContainer(createSwitchNavigator(
     ProfileAddGoalAddStep: ProfileAddGoalAddStep,
     ProfileResidentPerspective: ProfileResidentPerspective,
     ProfileSupervisorPerspective: ProfileSupervisorPerspective,
-    Register: Register,
+    RegisterResident: RegisterResident,
+    RegisterSupervisor: RegisterSupervisor,
     SelectCoach: SelectCoach,
   },
   {
-    initialRouteName: 'ProfileAddGoal',
+    initialRouteName: 'Home',
   }
 ), {
   headerMode: 'none',

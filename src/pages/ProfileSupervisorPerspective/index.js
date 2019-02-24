@@ -17,8 +17,24 @@ const addStyles = StyleSheet.create({
   }
 });
 
+const moreStyles = StyleSheet.create({
+  position: {
+    position: 'absolute',
+    top: 350,
+    right: 165,
+  },
+  size: {
+    width: 45,
+    height: 45,
+  }
+});
+
 const ProfileSupervisorPerspective = ({ navigation }) => (
   <PageBackground source={paulyprofileSupervisorPerspective}>
+    <StyledButton
+      style={[moreStyles.position, moreStyles.size]}
+      onPress={() => navigation.navigate('Incomes')}
+    />
     <StyledButton
       style={[addStyles.position, addStyles.size]}
       onPress={() => navigation.navigate('ProfileAddGoal')}

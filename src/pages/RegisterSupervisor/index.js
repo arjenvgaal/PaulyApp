@@ -1,7 +1,8 @@
 import React from 'react';
 import PageBackground from '../../components/PageBackground';
 import ActionButton from '../../components/ActionButton';
-import paulyregisterResident from'../../assets/paulyregisterResident.png';
+import StyledButton from '../../components/StyledButton';
+import paulyregisterSupervisor from'../../assets/paulyregisterSupervisor.png';
 import InputField from '../../components/InputField';
 import { withNavigation } from "react-navigation";
 import { StyleSheet } from "react-native";
@@ -24,9 +25,25 @@ const inputStyles = StyleSheet.create({
   },
 });
 
+const selectStyles = StyleSheet.create({
+  position: {
+    position: 'absolute',
+    top: 260,
+    left: 50,
+  },
+  size: {
+    width: '74%',
+    height: 30,
+  }
+});
 
-const Register = ({ navigation }) => (
-  <PageBackground source={paulyregisterResident}>
+
+const RegisterSupervisor = ({ navigation }) => (
+  <PageBackground source={paulyregisterSupervisor}>
+    <StyledButton
+      style={[selectStyles.position, selectStyles.size]}
+      onPress={() => navigation.navigate('RegisterResident')}
+    />
     <InputField
       styleOptions={inputStyles.firstNamePosition}
       placeholder="First name"
@@ -39,8 +56,8 @@ const Register = ({ navigation }) => (
       styleOptions={inputStyles.numberPosition}
       placeholder="+ 44"
     />
-    <ActionButton onPress={() => navigation.navigate('SelectCoach')} />
+    <ActionButton onPress={() => navigation.navigate('Overview')} />
   </PageBackground>
 );
 
-export default withNavigation(Register);
+export default withNavigation(RegisterSupervisor);

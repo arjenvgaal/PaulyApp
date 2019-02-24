@@ -6,7 +6,7 @@ import { withNavigation } from 'react-navigation';
 
 const Home = ({ navigation }) => (
   <PageBackground source={paulyhome}>
-    <ActionButton onPress={() => navigation.navigate('Register')} />
+    <ActionButton onPress={() => navigation.navigate('RegisterResident')} />
   </PageBackground>
 );
 
