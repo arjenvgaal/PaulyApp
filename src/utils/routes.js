@@ -1,5 +1,5 @@
 import React from 'react';
-import { createSwitchNavigator, createAppContainer } from 'react-navigation';
+import { createSwitchNavigator, createStackNavigator, createAppContainer } from 'react-navigation';
 import ExpensesResident from '../pages/ExpensesResident';
 import ExpensesSupervisor from '../pages/ExpensesSupervisor';
 import ExpensesResidentAdd from '../pages/ExpensesResidentAdd';
@@ -17,19 +17,28 @@ import ProfileSupervisorPerspective from '../pages/ProfileSupervisorPerspective'
 import RegisterResident from '../pages/RegisterResident';
 import RegisterSupervisor from '../pages/RegisterSupervisor';
 import SelectCoach from '../pages/SelectCoach';
-import { fromLeft } from 'react-navigation-transitions';
+import { fadeIn } from 'react-navigation-transitions';
 
-const NavigationRouter = createAppContainer(createSwitchNavigator(
+const financeStack = createSwitchNavigator({
+  ExpensesResidentAdd: ExpensesResidentAdd,
+  ExpensesSupervisorAdd: ExpensesSupervisorAdd,
+  IncomesResidentAdd: IncomesResidentAdd,
+  IncomesSupervisorAdd: IncomesSupervisorAdd,
+}, {
+  mode: 'modal',
+  navigationOptions: {
+    headerVisible: false,
+  },
+});
+
+const NavigationRouter = createAppContainer(createStackNavigator(
   {
-    ExpensesResidentAdd: ExpensesResidentAdd,
-    ExpensesSupervisorAdd: ExpensesSupervisorAdd,
+    Finance: financeStack,
     ExpensesResident: ExpensesResident,
     ExpensesSupervisor: ExpensesSupervisor,
     Home: Home,
     IncomesResident: IncomesResident,
     IncomesSupervisor: IncomesSupervisor,
-    IncomesResidentAdd: IncomesResidentAdd,
-    IncomesSupervisorAdd: IncomesSupervisorAdd,
     Overview: Overview,
     ProfileAddGoal: ProfileAddGoal,
     ProfileAddGoalAddStep: ProfileAddGoalAddStep,
@@ -40,13 +49,20 @@ const NavigationRouter = createAppContainer(createSwitchNavigator(
     SelectCoach: SelectCoach,
   },
   {
-    initialRouteName: 'ProfileSupervisorPerspective',
-    transitionConfig: () => fromLeft(),
+    initialRouteName: 'RegisterResident',
+    headerMode: 'none',
+    navigationOptions: {
+      headerVisible: false,
+      gesturesEnabled: true
+    },
+    transitionConfig: () => fadeIn(),
   }
 ), {
+  mode: 'modal',
   headerMode: 'none',
   navigationOptions: {
     headerVisible: false,
+    gesturesEnabled: true
   },
 });
 

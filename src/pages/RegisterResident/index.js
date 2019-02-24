@@ -1,6 +1,7 @@
 import React from 'react';
 import PageBackground from '../../components/PageBackground';
 import ActionButton from '../../components/ActionButton';
+import CheckBox from '../../components/CheckBox';
 import StyledButton from '../../components/StyledButton';
 import paulyregisterResident from'../../assets/paulyregisterResident.png';
 import InputField from '../../components/InputField';
@@ -23,6 +24,11 @@ const inputStyles = StyleSheet.create({
     bottom: 205,
     marginHorizontal: 50
   },
+  checkboxPosition: {
+    position: 'absolute',
+    bottom: 165,
+    left: 50,
+  }
 });
 
 const selectStyles = StyleSheet.create({
@@ -56,6 +62,7 @@ const RegisterResident = ({ navigation }) => (
       styleOptions={inputStyles.numberPosition}
       placeholder="+ 44"
     />
+    <CheckBox styleOptions={inputStyles.checkboxPosition} />
     <ActionButton onPress={() => navigation.navigate('SelectCoach')} />
   </PageBackground>
 );
