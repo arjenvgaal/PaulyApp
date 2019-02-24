@@ -57,10 +57,6 @@ const ProfileGoalAddGoalStepAdded = ({ navigation }) => (
       style={[backStyles.position, backStyles.size]}
       onPress={() => navigation.navigate('ProfileAddGoal')}
     />
-    <InputField
-      styleOptions={inputStyles.goalNamePosition}
-      placeholder="Name of your goal"
-    />
     <StyledButton
       style={[goalStyles.position, goalStyles.size]}
       onPress={() => navigation.navigate('ProfileGoalAddGoalStepAddedAndChecked')}
