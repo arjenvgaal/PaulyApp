@@ -52,7 +52,7 @@ const NavigationRouter = createAppContainer(createStackNavigator(
     ProfileSupervisorPerspective: ProfileSupervisorPerspective,
   },
   {
-    initialRouteName: 'ProfileOneGoal',
+    initialRouteName: 'Home',
     headerMode: 'none',
     navigationOptions: {
       headerVisible: false,
