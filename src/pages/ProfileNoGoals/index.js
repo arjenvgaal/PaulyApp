@@ -14,7 +14,6 @@ const moreStyles = StyleSheet.create({
   size: {
     width: 45,
     height: 45,
-
   }
 });
 
@@ -34,7 +33,7 @@ const ProfileNoGoals = ({ navigation }) => (
   <PageBackground source={paulyprofileNoGoals}>
     <StyledButton
       style={[moreStyles.position, moreStyles.size]}
-      onPress={() => navigation.navigate('ExpensesResident')}
+      onPress={() => navigation.navigate('ExpensesEmpty')}
     />
     <StyledButton
       style={[addStyles.position, addStyles.size]}

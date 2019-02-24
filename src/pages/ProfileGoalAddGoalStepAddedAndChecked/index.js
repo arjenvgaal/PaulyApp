@@ -55,7 +55,7 @@ const ProfileGoalAddGoalStepAddedAndChecked = ({ navigation }) => (
   <PageBackground source={paulyprofileGoalAddGoalStepAddedAndChecked}>
     <StyledButton
       style={[backStyles.position, backStyles.size]}
-      onPress={() => navigation.navigate('ProfileSupervisorPerspective')}
+      onPress={() => navigation.navigate('ProfileOneGoal')}
     />
     <StyledButton
       style={[goalStyles.position, goalStyles.size]}
