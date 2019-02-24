@@ -4,7 +4,7 @@ import checkmark from '../../assets/checkmark.png';
 
 export default class CheckBox extends Component {
   state = {
-    visible: true,
+    visible: false,
   };
 
   toggleVisibility = () => this.setState({ visible: !this.state.visible });

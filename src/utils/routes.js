@@ -1,5 +1,5 @@
 import React from 'react';
-import { createSwitchNavigator, createStackNavigator, createAppContainer } from 'react-navigation';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 import ExpensesResident from '../pages/ExpensesResident';
 import ExpensesSupervisor from '../pages/ExpensesSupervisor';
 import ExpensesResidentAdd from '../pages/ExpensesResidentAdd';
@@ -19,21 +19,12 @@ import RegisterSupervisor from '../pages/RegisterSupervisor';
 import SelectCoach from '../pages/SelectCoach';
 import { fadeIn } from 'react-navigation-transitions';
 
-const financeStack = createSwitchNavigator({
-  ExpensesResidentAdd: ExpensesResidentAdd,
-  ExpensesSupervisorAdd: ExpensesSupervisorAdd,
-  IncomesResidentAdd: IncomesResidentAdd,
-  IncomesSupervisorAdd: IncomesSupervisorAdd,
-}, {
-  mode: 'modal',
-  navigationOptions: {
-    headerVisible: false,
-  },
-});
-
 const NavigationRouter = createAppContainer(createStackNavigator(
   {
-    Finance: financeStack,
+    ExpensesResidentAdd: ExpensesResidentAdd,
+    ExpensesSupervisorAdd: ExpensesSupervisorAdd,
+    IncomesResidentAdd: IncomesResidentAdd,
+    IncomesSupervisorAdd: IncomesSupervisorAdd,
     ExpensesResident: ExpensesResident,
     ExpensesSupervisor: ExpensesSupervisor,
     Home: Home,
@@ -49,7 +40,7 @@ const NavigationRouter = createAppContainer(createStackNavigator(
     SelectCoach: SelectCoach,
   },
   {
-    initialRouteName: 'RegisterResident',
+    initialRouteName: 'Home',
     headerMode: 'none',
     navigationOptions: {
       headerVisible: false,
